@@ -6,6 +6,7 @@
   <title>Federico Michetti | CV Profesional</title>
   <meta name="description" content="CV de Federico Michetti - Lic. en Gestión Tecnológica. Experiencia en TradeSpark, análisis funcional y automatización de procesos.">
   
+  <!-- Fuentes Profesionales -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -48,15 +49,26 @@
       box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.5);
     }
 
-    /* ---------- HEADER SECTON ---------- */
+    /* ---------- HEADER SECTION ---------- */
     header {
       padding: 40px;
       background: linear-gradient(135deg, #1e293b 0%, #111827 100%);
       border-bottom: 1px solid var(--border-color);
       display: grid;
-      grid-template-columns: 1fr auto;
+      grid-template-columns: auto 1fr auto;
       align-items: center;
-      gap: 24px;
+      gap: 32px;
+    }
+
+    /* ESTILO DE LA FOTO DE PERFIL */
+    .profile-img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;          /* Hace la foto completamente redonda */
+      object-fit: cover;           /* Evita que la imagen se deforme o estire */
+      border: 3px solid var(--accent-gold); /* Borde dorado sutil */
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
+      display: block;
     }
 
     .header-info h1 {
@@ -276,11 +288,15 @@
       header {
         grid-template-columns: 1fr;
         padding: 24px;
+        justify-items: center;
+        text-align: center;
+        gap: 20px;
       }
       .contact-methods {
         flex-direction: row;
         flex-wrap: wrap;
         font-size: 12px;
+        justify-content: center;
       }
       .cv-body {
         grid-template-columns: 1fr;
@@ -295,7 +311,11 @@
 
   <div class="container">
     
+    <!-- HEADER -->
     <header>
+      <!-- FOTO DE PERFIL INTEGRADA -->
+      <img src="foto.jpg" alt="Foto de Federico Michetti" class="profile-img">
+
       <div class="header-info">
         <h1>Federico Michetti</h1>
         <div class="title-sub">Lic. en Gestión Tecnológica</div>
@@ -311,13 +331,16 @@
       </div>
     </header>
 
+    <!-- CUERPO DEL CV -->
     <div class="cv-body">
       
+      <!-- COLUMNA PRINCIPAL -->
       <main class="main-column">
         
         <section>
           <h2 class="section-title">Experiencia Laboral</h2>
           
+          <!-- TradeSpark -->
           <div class="timeline-item">
             <div class="timeline-header">
               <span class="role-title">TradeSpark</span>
@@ -331,6 +354,7 @@
             </ul>
           </div>
 
+          <!-- Estudio Contable -->
           <div class="timeline-item">
             <div class="timeline-header">
               <span class="role-title">Estudio Contable</span>
@@ -342,6 +366,7 @@
             </ul>
           </div>
 
+          <!-- Bulonfer -->
           <div class="timeline-item">
             <div class="timeline-header">
               <span class="role-title">Bulonfer <span class="company-name">— Asistente de Compras Nac. e Importación</span></span>
@@ -354,6 +379,7 @@
             </ul>
           </div>
 
+          <!-- Bulonfer Sistemas -->
           <div class="timeline-item">
             <div class="timeline-header">
               <span class="role-title">Bulonfer <span class="company-name">— Soporte de Primera Línea</span></span>
@@ -364,6 +390,7 @@
             </ul>
           </div>
 
+          <!-- Avico -->
           <div class="timeline-item">
             <div class="timeline-header">
               <span class="role-title">Avico</span>
@@ -374,6 +401,7 @@
             </ul>
           </div>
 
+          <!-- UNICEN -->
           <div class="timeline-item">
             <div class="timeline-header">
               <span class="role-title">UNICEN. FCE. <span class="company-name">— Ayudante de Cátedra</span></span>
@@ -403,6 +431,7 @@
 
       </main>
 
+      <!-- COLUMNA LATERAL -->
       <aside class="side-column">
         
         <section>
