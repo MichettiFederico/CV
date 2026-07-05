@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Federico Michetti | CV Profesional</title>
+  <meta name="description" content="CV de Federico Michetti - Lic. en Gestión Tecnológica. Experiencia en TradeSpark, análisis funcional y automatización de procesos.">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-main: #0f172a;       /* Fondo oscuro profundo */
+      --bg-card: #1e293b;       /* Fondo de tarjetas */
+      --accent-gold: #e2b857;   /* Dorado premium para detalles */
+      --text-primary: #f8fafc;  /* Texto principal blanco suave */
+      --text-secondary: #94a3b8;/* Texto secundario gris azulado */
+      --text-muted: #64748b;    /* Texto apagado */
+      --border-color: rgba(148, 163, 184, 0.12);
+      --font-sans: 'Inter', sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-main);
+      color: var(--text-primary);
+      font-family: var(--font-sans);
+      line-height: 1.6;
+      padding: 40px 20px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      background: var(--bg-card);
+      border-radius: 12px;
+      border: 1px solid var(--border-color);
+      overflow: hidden;
+      box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.5);
+    }
+
+    /* ---------- HEADER SECTON ---------- */
+    header {
+      padding: 40px;
+      background: linear-gradient(135deg, #1e293b 0%, #111827 100%);
+      border-bottom: 1px solid var(--border-color);
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .header-info h1 {
+      font-size: 32px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 6px;
+    }
+
+    .header-info .title-sub {
+      font-family: var(--font-mono);
+      color: var(--accent-gold);
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-weight: 500;
+      margin-bottom: 16px;
+    }
+
+    .header-info p {
+      color: var(--text-secondary);
+      font-size: 15px;
+      max-width: 650px;
+    }
+
+    .contact-methods {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      font-family: var(--font-mono);
+      font-size: 13px;
+      background: rgba(15, 23, 42, 0.4);
+      padding: 16px;
+      border-radius: 6px;
+      border: 1px solid var(--border-color);
+    }
+
+    .contact-methods a {
+      color: var(--text-primary);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: color 0.2s;
+    }
+
+    .contact-methods a:hover {
+      color: var(--accent-gold);
+    }
+
+    /* ---------- TWO COLUMN LAYOUT ---------- */
+    .cv-body {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 1px;
+      background-color: var(--border-color);
+    }
+
+    .main-column {
+      background-color: var(--bg-card);
+      padding: 40px;
+    }
+
+    .side-column {
+      background-color: #1a2333;
+      padding: 40px;
+    }
+
+    /* ---------- COMPONENT STYLES ---------- */
+    section {
+      margin-bottom: 40px;
+    }
+
+    section:last-child {
+      margin-bottom: 0;
+    }
+
+    h2.section-title {
+      font-size: 14px;
+      font-family: var(--font-mono);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--accent-gold);
+      margin-bottom: 24px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    h2.section-title::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background-color: var(--border-color);
+    }
+
+    .timeline-item {
+      margin-bottom: 28px;
+      position: relative;
+    }
+
+    .timeline-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .timeline-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      margin-bottom: 6px;
+    }
+
+    .role-title {
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    .company-name {
+      color: var(--text-secondary);
+      font-weight: 400;
+    }
+
+    .date-badge {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      color: var(--accent-gold);
+      background: rgba(226, 184, 87, 0.08);
+      padding: 2px 8px;
+      border-radius: 4px;
+    }
+
+    .timeline-item ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    .timeline-item li {
+      font-size: 14.5px;
+      color: var(--text-secondary);
+      position: relative;
+      padding-left: 16px;
+      margin-bottom: 6px;
+    }
+
+    .timeline-item li::before {
+      content: '›';
+      position: absolute;
+      left: 0;
+      color: var(--accent-gold);
+      font-weight: bold;
+      font-size: 16px;
+      top: -1px;
+    }
+
+    /* Skills & Tags */
+    .skill-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .skill-item {
+      font-size: 14px;
+      color: var(--text-secondary);
+      padding-bottom: 8px;
+      border-bottom: 1px dashed rgba(148, 163, 184, 0.08);
+    }
+
+    .skill-item:last-child {
+      border-bottom: none;
+    }
+
+    .tag-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .tag {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      background: var(--bg-main);
+      color: var(--text-primary);
+      padding: 4px 10px;
+      border-radius: 4px;
+      border: 1px solid var(--border-color);
+    }
+
+    .education-item {
+      margin-bottom: 16px;
+    }
+
+    .education-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .edu-date {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      color: var(--text-muted);
+      display: block;
+      margin-bottom: 2px;
+    }
+
+    .edu-title {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--text-primary);
+    }
+
+    /* ---------- RESPONSIVE ---------- */
+    @media (max-width: 768px) {
+      body {
+        padding: 10px;
+      }
+      header {
+        grid-template-columns: 1fr;
+        padding: 24px;
+      }
+      .contact-methods {
+        flex-direction: row;
+        flex-wrap: wrap;
+        font-size: 12px;
+      }
+      .cv-body {
+        grid-template-columns: 1fr;
+      }
+      .main-column, .side-column {
+        padding: 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    
+    <header>
+      <div class="header-info">
+        <h1>Federico Michetti</h1>
+        <div class="title-sub">Lic. en Gestión Tecnológica</div>
+        <p>Considero oportuno relevar y analizar los procesos funcionales de cualquier organización con la finalidad de participar en el modelado de su sistema de Información.</p>
+      </div>
+      <div class="contact-methods">
+        <a href="tel:+542281552807">
+          <span>📞</span> 2281 552807
+        </a>
+        <a href="mailto:fede07michetti@gmail.com">
+          <span>✉️</span> fede07michetti@gmail.com
+        </a>
+      </div>
+    </header>
+
+    <div class="cv-body">
+      
+      <main class="main-column">
+        
+        <section>
+          <h2 class="section-title">Experiencia Laboral</h2>
+          
+          <div class="timeline-item">
+            <div class="timeline-header">
+              <span class="role-title">TradeSpark</span>
+              <span class="date-badge">08-2025 / Actualidad</span>
+            </div>
+            <ul>
+              <li>Capacitaciones y asesoramiento a Bancos y ALyCs sobre el uso de la plataforma y estrategias algorítmicas.</li>
+              <li>Automatización de procesos operativos e internos.</li>
+              <li>Relevamiento de necesidades funcionales para el equipo de desarrollo de plataforma y estrategias.</li>
+              <li>Análisis de datos a través de Looker Studio para la generación de reportes y tableros de control.</li>
+            </ul>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-header">
+              <span class="role-title">Estudio Contable</span>
+              <span class="date-badge">06-2025 / 09-2025</span>
+            </div>
+            <ul>
+              <li>Manejo de sistemas contables.</li>
+              <li>Administración de negocios y consultoría empresarial.</li>
+            </ul>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-header">
+              <span class="role-title">Bulonfer <span class="company-name">— Asistente de Compras Nac. e Importación</span></span>
+              <span class="date-badge">05-2023 / 04-2024</span>
+            </div>
+            <ul>
+              <li>Solicitar y evaluar cotizaciones de proveedores; consultar precios, tiempos de entrega, condiciones de compra y pago.</li>
+              <li>Elaborar, enviar y dar seguimiento a órdenes de compras. Coordinar entrega de mercadería según planificaciones.</li>
+              <li>Controlar, conciliar e ingresar las facturas de compras al sistema. Seguimiento de pagos. Creación y modificación de artículos del inventario.</li>
+            </ul>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-header">
+              <span class="role-title">Bulonfer <span class="company-name">— Soporte de Primera Línea</span></span>
+              <span class="date-badge">05-2023 / 04-2024</span>
+            </div>
+            <ul>
+              <li>Atención y resolución de incidencias técnicas en el Área de Sistemas.</li>
+            </ul>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-header">
+              <span class="role-title">Avico</span>
+              <span class="date-badge">12-2022 / 03-2023</span>
+            </div>
+            <ul>
+              <li>Control de stock y auditoría interna de inventarios.</li>
+            </ul>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-header">
+              <span class="role-title">UNICEN. FCE. <span class="company-name">— Ayudante de Cátedra</span></span>
+            </div>
+            <ul>
+              <li>Ayudante de cátedra en las materias: Matemática 1 e Innovación y Diseño de Sistemas.</li>
+            </ul>
+          </div>
+
+        </section>
+
+        <section>
+          <h2 class="section-title">Cursos y Capacitaciones</h2>
+          
+          <div class="education-item">
+            <span class="edu-date">10-2022</span>
+            <div class="edu-title">Introducción al Desarrollo Web 1</div>
+            <div style="font-size: 13.5px; color: var(--text-secondary);">Instituto de Economía Internacional</div>
+          </div>
+
+          <div class="education-item">
+            <span class="edu-date">10-2022</span>
+            <div class="edu-title">Fundamentos de la Codificación</div>
+            <div style="font-size: 13.5px; color: var(--text-secondary);">Grasshopper</div>
+          </div>
+        </section>
+
+      </main>
+
+      <aside class="side-column">
+        
+        <section>
+          <h2 class="section-title">Conocimientos</h2>
+          <div class="skill-list">
+            <div class="skill-item">Análisis y Diseño de Sistemas</div>
+            <div class="skill-item">Derecho Aplicado a la Tecnología</div>
+            <div class="skill-item">Estrategia y Modelo de Negocio</div>
+            <div class="skill-item">Transformación Digital</div>
+            <div class="skill-item">Seguridad de la Información y Auditoría</div>
+            <div class="skill-item">Herramientas de Inteligencia Empresarial</div>
+            <div class="skill-item">Tributación en Negocios Tecnológicos</div>
+          </div>
+        </section>
+
+        <section>
+          <h2 class="section-title">Intereses</h2>
+          <div class="tag-container">
+            <span class="tag">Análisis Funcional</span>
+            <span class="tag">SQL</span>
+            <span class="tag">Transformación Digital</span>
+            <span class="tag">Looker Studio</span>
+          </div>
+        </section>
+
+      </aside>
+
+    </div>
+  </div>
+
+</body>
+</html>
